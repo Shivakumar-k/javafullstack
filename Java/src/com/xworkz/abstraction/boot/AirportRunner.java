@@ -15,6 +15,7 @@ public class AirportRunner {
 		System.out.println(port.minAmount());
 		System.out.println(port.stayingHotel());
 		System.out.println(port.understandingConcept());
+		System.out.println(port);
 		
 	
 
