@@ -1,4 +1,4 @@
-package com.xworkz.application.boot;
+gpackage com.xworkz.application.boot;
 
 import com.xworkz.application.dto.MarketDTO;
 
@@ -11,7 +11,7 @@ public class MarketRunner {
 		 market.setMarketName("KR market");
 		 market.setLocation("Bengaluru");
 		 market.setSize(2500);
-		 market.setType("Veetable");
+		 market.setType("Spices");
 		 
 		 System.out.println(market);
 

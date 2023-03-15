@@ -71,14 +71,4 @@ public class AttendanceDTO implements Serializable {
 		return allPresent == other.allPresent && boys == other.boys && girls == other.girls
 				&& Objects.equals(section, other.section) && totalStudents == other.totalStudents;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	 
-
 }

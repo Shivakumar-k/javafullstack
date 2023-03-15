@@ -13,7 +13,7 @@ public class TravelRunner {
 		 travel.setDestination("DudhSagar");
 		 travel.setStartDAte(LocalDate.of(2023, 01, 02));
 		 travel.setEndDAte(LocalDate.of(2023, 05, 02));
-		 travel.setNoOfPeople(5);
+		 travel.setNoOfPeople("5");
 		 
 		 System.out.println(travel.hashCode());
 		 System.out.println(travel);

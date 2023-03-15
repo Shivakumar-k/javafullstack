@@ -1,5 +1,7 @@
 package com.xworkz.application.boot;
 
+import java.time.LocalDate;
+
 import com.xworkz.application.dto.AwarenessDTO;
 
 public class AwarenessRunner {
@@ -9,8 +11,8 @@ public class AwarenessRunner {
 		AwarenessDTO aware =new AwarenessDTO();
 		
 		aware.setAwarenessTopic("cancer Awareness");
-		aware.setStartDAte(null);
-		aware.setEndDAte(null);;
+		aware.setStartDAte(LocalDate.of(2022, 01, 02));
+		aware.setEndDAte(LocalDate.of(2022, 02, 2));
 		aware.setTargetAudience("Youth");
 		
 		System.out.println(aware);
