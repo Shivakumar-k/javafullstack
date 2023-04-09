@@ -1,4 +1,5 @@
 package com.xworkz.application.dto;
+
 import com.xworkz.application.constants.Language;
 import com.xworkz.application.constants.Type;
 import com.xworkz.application.constants.Supported;
@@ -15,7 +16,7 @@ public class ApplicationDTO implements Serializable {
 	private double size;
 	private double version;
 	private Type type = Type.ANDROID;
-	private double price; 
+	private double price;
 	private LocalDate firstVersionReleaseDate;// (past date)
 	private LocalDate currentVersionReleaseDate;// (<todaty)
 	private LocalDate nextVersionReleaseDate;// (>today)
@@ -32,6 +33,7 @@ public class ApplicationDTO implements Serializable {
 	public ApplicationDTO() {
 		System.out.println("no-arg constructor");
 	}
+
 	public ApplicationDTO(String name, String developedBy, LocalDate createdDate, double size, double version,
 			Type type, double price, LocalDate firstVersionReleaseDate, LocalDate currentVersionReleaseDate,
 			LocalDate nextVersionReleaseDate, int trialDays, Language langUsed, double minProcessorSpeed,
@@ -58,7 +60,6 @@ public class ApplicationDTO implements Serializable {
 		this.rating = rating;
 		this.osTypeSupported = osTypeSupported;
 	}
-
 
 	public String getName() {
 		return name;

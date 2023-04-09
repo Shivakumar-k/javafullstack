@@ -20,7 +20,6 @@ public class ApplicationServiceImplements implements ApplicationService {
 			double size = dto.getSize();
 			double version = dto.getVersion();
 			Type type = dto.getType();
-			Type type1 = dto.getType();
 			double price = dto.getPrice();
 			LocalDate date1 = dto.getFirstVersionReleaseDate();
 			LocalDate date2 = dto.getCurrentVersionReleaseDate();

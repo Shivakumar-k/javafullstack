@@ -9,20 +9,20 @@ import com.xworkz.application.constants.Color;
 import com.xworkz.application.constants.TypeAndWeight;
 
 public class HeadphoneDTO implements Serializable {
-	
+
 	private Brand brand;
 	private Color color;
 	private TypeAndWeight typeAndWeight;
-	private String modelNo,customerName;
-	private int invoiceNo,warrantyPeriod;
+	private String modelNo, customerName;
+	private int invoiceNo, warrantyPeriod;
 	private double price;
 	private boolean bass;
 	private LocalDate mfgDate;
-	
+
 	public HeadphoneDTO() {
 		System.out.println("no-arg Constructor in HeadphoneDTO");
 	}
-	
+
 	public HeadphoneDTO(Brand brand, Color color, TypeAndWeight typeAndWeight, String modelNo, String customerName,
 			int invoiceNo, int warrantyPeriod, double price, boolean bass, LocalDate mfgDate) {
 		super();
@@ -40,9 +40,10 @@ public class HeadphoneDTO implements Serializable {
 
 	@Override
 	public String toString() {
-		return "HeadphoneDTO: [brand=" + brand + ", color=" + color + ", type=" + typeAndWeight +", Weight:"+TypeAndWeight.WIRELESS.getWeight() + ", modelNo="
-				+ modelNo + ", customerName=" + customerName + ", invoiceNo=" + invoiceNo + ", warrantyPeriod="
-				+ warrantyPeriod + ", price=" + price + ", bass=" + bass + ", mfgDate=" + mfgDate + "]";
+		return "HeadphoneDTO: [brand=" + brand + ", color=" + color + ", type=" + typeAndWeight + ", Weight:"
+				+ TypeAndWeight.WIRELESS.getWeight() + ", modelNo=" + modelNo + ", customerName=" + customerName
+				+ ", invoiceNo=" + invoiceNo + ", warrantyPeriod=" + warrantyPeriod + ", price=" + price + ", bass="
+				+ bass + ", mfgDate=" + mfgDate + "]";
 	}
 
 	@Override
@@ -146,7 +147,5 @@ public class HeadphoneDTO implements Serializable {
 	public void setMfgDate(LocalDate mfgDate) {
 		this.mfgDate = mfgDate;
 	}
-	
-	
 
 }
