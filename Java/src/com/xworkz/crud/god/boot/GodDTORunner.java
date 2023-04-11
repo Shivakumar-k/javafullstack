@@ -16,7 +16,7 @@ public class GodDTORunner {
 		GodDTO god1 = new GodDTO("Shiva", "Hindu", "Nothingness", "Maha Shivaratri", 1);
 		GodDTO god2 = new GodDTO("Hanuman", "Hindu", "Strength", "Hanuma jayanti", 1);
 		GodDTO god3 = new GodDTO("Durga Mata", "Hindu", "Evil Destroyer", "Dassara", 10);
-		GodDTO god4 = new GodDTO("Krishna", "Hindu", "Maintaining dharma", "Krishna janmaastmi", 1);
+		GodDTO god4 = new GodDTO("Krishna", "Hindu", "upholding dharma", "Krishna janmaastmi", 1);
 		GodDTO god5 = new GodDTO("Ganesh", "Hindu", "Peace", "ganesh jayanti", 1);
 		
 		
