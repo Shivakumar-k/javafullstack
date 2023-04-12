@@ -8,7 +8,7 @@ import java.util.Objects;
 public class ExamRunner {
 
 	public static void main(String[] args) {
-		Collection <String> exam = new ArrayList<>();
+		Collection <String> exam = new ArrayList<String>();
 		exam.add("Turbo Machines");
 		exam.add("Maths");
 		exam.add("Physics");
@@ -31,12 +31,12 @@ public class ExamRunner {
         }
         System.out.println("size: " + exam.size());
 
-        Iterator<String> castIterator = exam.iterator();
-        while (castIterator.hasNext()) {
-            String member = castIterator.next();
+        Iterator<String> examIterator = exam.iterator();
+        while (examIterator.hasNext()) {
+            String member = examIterator.next();
           {
                 if (Objects.isNull(member)) {
-                    castIterator.remove();
+                	examIterator.remove();
                     System.out.println("After remove: " + exam);
                    System.out.println("After remove size : " + exam.size());
                }

@@ -38,11 +38,12 @@ public class RRRMovieRunner {
           {
                 if (Objects.isNull(member)) {
                     castIterator.remove();
-                    System.out.println("After remove: " + cast);
-                   System.out.println("After remove size : " + cast.size());
                }
             }
+          
         }
+        System.out.println("After remove: " + cast);
+       System.out.println("After remove size : " + cast.size());
     }
 
 }

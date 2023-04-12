@@ -29,17 +29,18 @@ public class SambarPowderRunner {
         }
         System.out.println("size: " + sambar.size());
 
-        Iterator<String> castIterator = sambar.iterator();
-        while (castIterator.hasNext()) {
-            String member = castIterator.next();
+        Iterator<String>  sambarIterator = sambar.iterator();
+        while ( sambarIterator.hasNext()) {
+            String member =  sambarIterator.next();
           {
                 if (Objects.isNull(member)) {
-                    castIterator.remove();
-                    System.out.println("After remove: " + sambar);
-                   System.out.println("After remove size : " + sambar.size());
+                	 sambarIterator.remove();
+                 
                }
             }
         }
+        System.out.println("After remove: " + sambar);
+        System.out.println("After remove size : " + sambar.size());
 		
 
 	}

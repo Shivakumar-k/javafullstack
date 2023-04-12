@@ -32,12 +32,12 @@ public class whiskeyRunner {
 		}
 		System.out.println("size: " + whiskey.size());
 
-		Iterator<String> castIterator = whiskey.iterator();
-		while (castIterator.hasNext()) {
-			String member = castIterator.next();
+		Iterator<String> whiskeyIterator = whiskey.iterator();
+		while (whiskeyIterator.hasNext()) {
+			String member = whiskeyIterator.next();
 			{
 				if (Objects.isNull(member)) {
-					castIterator.remove();
+					whiskeyIterator.remove();
 					System.out.println("After remove: " + whiskey);
 					System.out.println("After remove size : " + whiskey.size());
 				}
