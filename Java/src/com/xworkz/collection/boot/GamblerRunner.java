@@ -8,8 +8,8 @@ public class GamblerRunner {
 
 	public static void main(String[] args) {
 		Gambler gamble = (arg) -> {
-			System.out.println("running participate method explicitly : " + arg);
-			if(arg<500 && arg<1000) {
+			System.out.println("running gamble method explicitly : " + arg);
+			if(arg>500 && arg<1000) {
 				return 0.0d;
 			}else if(arg>1000) {
 				return 100.0d;

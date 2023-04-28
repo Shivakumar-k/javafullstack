@@ -11,7 +11,7 @@ public class ShooterRunner {
 			return true;
 		};
 		
-		System.out.println("returned:"+ShooterUtil.test(shoot));
+		System.out.println("return:"+ShooterUtil.test(shoot));
 
 	}
 

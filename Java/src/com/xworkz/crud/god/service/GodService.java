@@ -4,7 +4,7 @@ import com.xworkz.crud.god.GodDTO;
 
 public interface GodService {
 	
-boolean validateAndSave(GodDTO dto);
+    boolean validateAndSave(GodDTO dto);
 	
 	GodDTO find(GodDTO dto);
 	
