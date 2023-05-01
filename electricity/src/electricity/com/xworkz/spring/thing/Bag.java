@@ -8,7 +8,7 @@ public class Bag {
 	public Bag() {
 		
 		System.out.println("no arg bag const");
-		// TODO Auto-generated constructor stub
+		
 	}
 
 }
