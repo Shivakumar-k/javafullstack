@@ -10,6 +10,7 @@ import com.xworkz.configure.StringConfigure;
 import com.xworkz.thing.Bank;
 import com.xworkz.thing.Car;
 import com.xworkz.thing.Hotel;
+import com.xworkz.thing.Mobile;
 import com.xworkz.thing.Rocket;
 import com.xworkz.thing.Shoe;
 import com.xworkz.thing.Television;
@@ -66,6 +67,12 @@ public class ComponentRunner {
 		System.out.println(c);
 
 		System.out.println(c.brand());
+		
+		System.out.println("----------Running mobile Component Class------------");
+		Mobile m = component.getBean(Mobile.class);
+		System.out.println(m);
+
+		System.out.println(m.modelName());
 		
 		
 
