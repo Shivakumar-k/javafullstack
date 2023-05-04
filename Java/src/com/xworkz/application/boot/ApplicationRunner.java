@@ -20,7 +20,7 @@ public class ApplicationRunner {
 		application.setCreatedDate(LocalDate.of(2004, 8, 13));
 		application.setSize(80);
 		application.setVersion(2.24D);
-		application.setType(Type.ANDROID);
+		application.setType(Type.NORMAL);
 		application.setPrice(500);
 		application.setFirstVersionReleaseDate(LocalDate.of(2004, 2, 4));
 		application.setCurrentVersionReleaseDate(LocalDate.of(2022, 1, 1));

@@ -15,7 +15,7 @@ public class ApplicationDTO implements Serializable {
 	private LocalDate createdDate;
 	private double size;
 	private double version;
-	private Type type = Type.ANDROID;
+	private java.awt.Window.Type type = type.NORMAL;
 	private double price;
 	private LocalDate firstVersionReleaseDate;// (past date)
 	private LocalDate currentVersionReleaseDate;// (<todaty)
@@ -105,8 +105,8 @@ public class ApplicationDTO implements Serializable {
 		return type;
 	}
 
-	public void setType(Type type) {
-		this.type = type;
+	public void setType(java.awt.Window.Type normal) {
+		this.type = normal;
 	}
 
 	public double getPrice() {

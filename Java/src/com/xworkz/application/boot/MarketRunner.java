@@ -1,4 +1,4 @@
-gpackage com.xworkz.application.boot;
+package com.xworkz.application.boot;
 
 import com.xworkz.application.dto.MarketDTO;
 

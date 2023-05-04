@@ -47,4 +47,64 @@ public class AddressRepoImplements implements AddressRepo{
 		return false;
 	}
 
+	@Override
+	public int total() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public AddressDTO findByNumber(int number) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean find(AddressDTO dto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public AddressDTO findByStreet(String street) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public AddressDTO findByPincode(int pincode) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public AddressDTO findByStreetAndPincodeAndArea(int pincode, String area, String street) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public AddressDTO findByCityAndState(String city, String state) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int findFloorBYNumber(int number) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String findCityByNumberAndFloorAndStreetAndPincode(int number, int floor, String street, int pincode) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int findPincodeByNumber(int number) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
