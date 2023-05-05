@@ -24,14 +24,13 @@ public class SocksServiceImpl implements SocksService {
 		System.out.println("Running validateAnd Save");
 		if (dto != null) {
 			System.out.println("dto is not null we can save");
-			System.out.println(dto);
 
 			Set<ConstraintViolation<SocksDTO>> ConstraintViolation = validator.validate(dto);
 
-			System.out.println("Total number of violations: " + ConstraintViolation.size());
-			ConstraintViolation.forEach(cv -> System.out.println(cv.getPropertyPath() + " " + cv.getMessage()));
-
-			if (ConstraintViolation != null && ConstraintViolation.isEmpty()) {
+			if (ConstraintViolation != null && !ConstraintViolation.isEmpty()) {
+				System.out.println("Total number of violations: " + ConstraintViolation.size());
+				ConstraintViolation.forEach(cv -> System.out.println(cv.getPropertyPath() + " " + cv.getMessage()));
+			} else {
 				System.out.println("no constraint violation in dto");
 				return this.repo.save(dto);
 			}

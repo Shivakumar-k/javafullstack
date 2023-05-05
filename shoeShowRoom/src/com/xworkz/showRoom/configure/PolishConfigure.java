@@ -19,7 +19,6 @@ public class PolishConfigure {
 	@Bean
 	public Validator validator() {
 		System.out.println("registering validator");
-
 		ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
 		Validator validator = factory.getValidator();
 		return validator;

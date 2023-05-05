@@ -12,12 +12,12 @@ import com.xworkz.showRoom.dto.PolishDTO;
 import com.xworkz.showRoom.repo.PolishRepoImpl;
 
 import lombok.AllArgsConstructor;
+
 @Component
 @AllArgsConstructor
 public class PolishServiceImpl implements PolishService {
-
+	
 	private PolishRepoImpl repo;
-
 	private Validator validator;
 
 	@Override
@@ -30,10 +30,10 @@ public class PolishServiceImpl implements PolishService {
 
 			Set<ConstraintViolation<PolishDTO>> ConstraintViolation = validator.validate(dto);
 
-			System.out.println("Total number of violations: " + ConstraintViolation.size());
-			ConstraintViolation.forEach(cv -> System.out.println(cv.getPropertyPath() + " " + cv.getMessage()));
-
-			if (ConstraintViolation != null && ConstraintViolation.isEmpty()) {
+			if (ConstraintViolation != null && !ConstraintViolation.isEmpty()) {
+				System.out.println("Total number of violations: " + ConstraintViolation.size());
+				ConstraintViolation.forEach(cv -> System.out.println(cv.getPropertyPath() + " " + cv.getMessage()));
+			}else {
 				System.out.println("no constraint violation in dto");
 				return this.repo.save(dto);
 			}

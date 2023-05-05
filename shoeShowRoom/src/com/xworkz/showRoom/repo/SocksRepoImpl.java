@@ -18,11 +18,6 @@ public class SocksRepoImpl implements SocksRepo {
 		System.out.println("no -arg const in repo impl");
 	}
 
-	public SocksRepoImpl(Collection<SocksDTO> socksdto) {
-		super();
-		this.socksdto = socksdto;
-	}
-
 	@Override
 	public boolean save(SocksDTO dto) {
 

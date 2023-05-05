@@ -16,19 +16,18 @@ import lombok.Data;
 public class PolishDTO implements Serializable,Comparable<PolishDTO> {
 	@NotNull
 	@NotEmpty
-	@Size(min = 3, max=20, message="brand name should be in between 3 and 20 chars")
+	@Size(min = 3, max=20)
 	private String brand;
 	@NotNull
 	@NotEmpty
-	@Size(min = 3, max=20, message="type should be in between 3 and 20 chars")
+	@Size(min = 3, max=20)
 	private String type;
-	@Min(value = 10, message="price should be greater than 10" )
+	@Min(value = 10)
 	private double price;
-	@Min(value = 10, message="quantity should be greater than 10" )
+	@Min(value = 10)
 	private int quantity;
 	@Override
 	public int compareTo(PolishDTO o) {
-		
 		return 0;
 	}
 	

@@ -16,11 +16,6 @@ public class SalesManagerRepoImpl implements SalesManagerRepo {
 		System.out.println("no - arg constr in repo impl");
 	}
 
-	public SalesManagerRepoImpl(Collection<SalesManagerDTO> salesManagerdto) {
-		super();
-		this.salesManagerdto = salesManagerdto;
-	}
-
 	@Override
 	public boolean save(SalesManagerDTO dto) {
 
