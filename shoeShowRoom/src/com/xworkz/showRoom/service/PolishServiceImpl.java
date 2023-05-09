@@ -26,7 +26,7 @@ public class PolishServiceImpl implements PolishService {
 		if (dto != null) {
 			System.out.println("dto is not null we can save");
 
-			System.out.println(dto);
+//			System.out.println(dto);
 
 			Set<ConstraintViolation<PolishDTO>> ConstraintViolation = validator.validate(dto);
 
