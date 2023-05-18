@@ -19,7 +19,7 @@ public class Runner {
 		
 		Stream.of(spring.getBeanDefinitionNames()).forEach(System.out::println);
 		
-//		Thing ref=spring.getBean(Thing.class);
+//  	Thing ref=spring.getBean(Thing.class);
 //		System.out.println(ref);
 		
 //		Security ref1=spring.getBean(Security .class);
@@ -38,7 +38,7 @@ public class Runner {
 //		System.out.println(ref1);
 		
 		Musuem ref1=spring.getBean(Musuem.class);
-	System.out.println(ref1);
+	    System.out.println(ref1);
 		
 		
 
