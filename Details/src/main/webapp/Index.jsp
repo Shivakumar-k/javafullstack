@@ -48,7 +48,7 @@
  Degree:
 <select name="degree">
   <option value="">Select an option</option>
-  <option value="bachelor">B.E</option>
+  <option value="b.e">B.E</option>
   <option value="bca">BCA</option>
   <option value="bsc">BSC</option>
 </select>
