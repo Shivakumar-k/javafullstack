@@ -8,7 +8,7 @@
 </head>
 <body>
 
-Name: <%=request.getAttribute("Name") %>
+Name: <%=request.getAttribute("name") %>
 <br>
 Qualification: <%=request.getAttribute("Qualification") %>
 <br>
@@ -16,7 +16,7 @@ Stream: <%=request.getAttribute("stream") %>
 <br>
 University: <%=request.getAttribute("Uni") %>
 <br>
-Collage: <%=request.getAttribute("collage") %>
+College: <%=request.getAttribute("college") %>
 <br>
 City: <%=request.getAttribute("city") %>
 <br>

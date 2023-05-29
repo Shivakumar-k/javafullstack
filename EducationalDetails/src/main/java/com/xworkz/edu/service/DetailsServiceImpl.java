@@ -19,10 +19,10 @@ public class DetailsServiceImpl implements DetailsService {
 			this.repo.save(dto);
 		}
 			else {
-				System.out.println("dti is null");
+				System.out.println("dto is null");
 				return false;
 			}
-		return false;
+		return this.repo.save(dto);
 
 	
 

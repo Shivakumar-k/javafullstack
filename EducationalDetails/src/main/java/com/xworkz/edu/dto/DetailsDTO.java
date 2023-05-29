@@ -18,7 +18,7 @@ public class DetailsDTO {
 	private String name;
 	@NotEmpty
 	@NotEmpty
-	@Size(min =3, max = 20, message= "size should between 3 and 20 chars")
+	@Size(min =2, max = 20, message= "size should between 3 and 20 chars")
 	private String qualification;
 	@NotEmpty
 	@NotEmpty
@@ -26,7 +26,7 @@ public class DetailsDTO {
 	private String stream;
 	@NotEmpty
 	@NotEmpty
-	@Size(min =3, max = 20, message= "size should between 3 and 20 chars")
+	@Size(min =2, max = 20, message= "size should between 3 and 20 chars")
 	private String university;
 	@NotEmpty
 	@NotEmpty
@@ -38,7 +38,7 @@ public class DetailsDTO {
 	private String city;
 	@NotEmpty
 	@NotEmpty
-	@Size(min =3, max = 20, message= "size should between 3 and 20 chars")
+	@Size(min =1, max = 20, message= "size should between 3 and 20 chars")
 	private String state;
 	@NotEmpty
 	@NotEmpty

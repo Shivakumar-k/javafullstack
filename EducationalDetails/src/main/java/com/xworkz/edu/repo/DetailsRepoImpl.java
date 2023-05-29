@@ -36,7 +36,9 @@ public class DetailsRepoImpl implements DetailsRepo {
 				e.printStackTrace();
 			}
 			if(count!=0) {
+//				System.out.println("count=!0");
 				return true;
+				
 			}
 		}
 		return false;

@@ -51,8 +51,17 @@ public class DetailsServelet extends HttpServlet {
 			
 		}
 		
-
-
+		req.setAttribute("name", req.getParameter("name"));
+		req.setAttribute("Qualification", req.getParameter("Qualification"));
+        req.setAttribute("stream", req.getParameter("stream"));
+        req.setAttribute("Uni", req.getParameter("Uni"));
+        req.setAttribute("college", req.getParameter("college"));
+        req.setAttribute("city", req.getParameter("city"));
+        req.setAttribute("state", req.getParameter("state"));
+        req.setAttribute("country", req.getParameter("country"));
+        
+        
+        
 		RequestDispatcher requestDispatcher = req.getRequestDispatcher("Display.jsp");
 	
 		requestDispatcher.forward(req, resp);
