@@ -18,5 +18,9 @@ Mobile No: <%=request.getParameter("mobile") %>
 Type: <%=request.getParameter("type") %>
 Description: <%=request.getParameter("description") %>
 </pre>
+
+<form action="view" method="post">
+<input type="submit" value="view detailsS">
+</form>
 </body>
 </html>

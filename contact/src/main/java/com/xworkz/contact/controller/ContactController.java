@@ -2,7 +2,7 @@ package com.xworkz.contact.controller;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
+
 
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
@@ -13,7 +13,7 @@ import com.xworkz.contact.dto.ContactDTO;
 @RequestMapping("/")
 public class ContactController {
 	
-	private Collection<ContactDTO> contactDTOs = new ArrayList();
+	private Collection<ContactDTO> contactDTOs = new ArrayList <>();
 	
 	public ContactController() {
 	System.out.println("Running ContactController");
@@ -32,6 +32,12 @@ public class ContactController {
 		m.addAttribute("msg", "Registered successfully "+dto.getName());
 		
 		return "display.jsp";
+	}
+	@RequestMapping("/view")
+	public String view(Model mo) {
+		mo.addAttribute("dtos",this.contactDTOs);
+	
+		return "view.jsp";
 	}
 	
 	

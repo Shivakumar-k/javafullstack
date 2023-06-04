@@ -12,7 +12,9 @@
 
 <pre>
 
-<form action="send" method="post" >
+ <form action="send" method="post" >
+ 
+ 
 
 Name: <input type="text" name="name" >
 Email: <input type="email" name="email" >
