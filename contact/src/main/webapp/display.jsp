@@ -17,6 +17,7 @@ Country: <%=request.getParameter("country") %>
 Mobile No: <%=request.getParameter("mobile") %>
 Type: <%=request.getParameter("type") %>
 Description: <%=request.getParameter("description") %>
+
 </pre>
 
 <form action="view" method="post">

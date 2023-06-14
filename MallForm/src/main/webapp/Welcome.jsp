@@ -4,18 +4,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link
+<link href="style.css" rel="stylesheet">
+  <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
 	rel="stylesheet">
 <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
-	rel="stylesheet">
+	rel="stylesheet">	
+
 <meta charset="ISO-8859-1">
 <title>Mall</title>
-<nav class="navbar bg-green-dark border-bottom border-bottom-dark" data-bs-theme="dark">
-	<div class="container-fluid">
-		<a></a> <a href="view">View Details</a>
-	</div>
-	</nav>
+	<nav class="navbar bg-dark border-bottom border-bottom-dark">
+	<div class="btn btn-outline-success">
+		<a></a>
+		<div>
+			<a href="view">View Details</a>
+		</div>
+		</div>
+		<div style="color: lightblue">Mall Feedback Form</div>
+		<div class="btn btn-outline-success" >
+		<a href="Image.jsp">download</a>
+		</div>
+	
+</nav>
+<script>
+function forChar() {
+	var mallName = document.getElementById("Name");
+	console.log(mallName.value);
+	var errMall = document.getElementById("errMallName");
+	if(mallName.value!='' && mallName.value.length>3 && mallName.value.length<20 ){
+		errMall.innerHTML=''
+		
+	}else{
+		errMall.innerHTML='enter valid MALL NAME';
+		errMall.style.color='red'
+	}
+		
+}
+
+</script>
 
 </head>
 
@@ -26,11 +52,12 @@
             </c:forEach></h4>
 <body>
 <pre>
-<center>
-<form action="send" method="post">
+
+<form action="send" method="post" enctype="multipart/form-data">
   
-   <label>Mall Name:</label> 
- <input type="text" name="mallName" required>
+  Mall Name:
+ <input type="text" name="mallName" onchange="forChar()" id="Name" required>
+ <span id="errMallName" ></span>
    
  <label>Location:</label> 
  <input type="text" name="location" required>
@@ -71,15 +98,15 @@
   
   <label>Feedback:</label>
   <textarea name="feedback" rows="4" required></textarea>
-  <div class="d-grid gap-2 col-2 mx-auto">
+ 
+  
+  <label>Image: <input type="file" name="file"></label>
+  
+   <div class="d-grid gap-2 col-2 mx-auto">
   <input class="btn btn-primary" type="submit" value="Submit">
   </div>
-  
 </form> 
-
-
 </pre>
-</center>
 </body>
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

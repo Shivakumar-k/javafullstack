@@ -8,7 +8,7 @@ import javax.validation.constraints.Size;
 
 import lombok.Data;
 @Data
-public class MallDTO implements Serializable{
+public class MallDTO implements Serializable,Comparable<MallDTO>{
 	@Size(min = 3,max=20, message = "Mall Name should be in between 3 and 20")
 	private String mallName;
 	@Size(min = 3,max=20, message = "Location should be in between 3 and 20")
@@ -26,5 +26,19 @@ public class MallDTO implements Serializable{
 	private String email;
 	@Size(min = 5,max=200, message = "feedback should be in between 3 and 20")
 	private String feedback;
+	
+	private String originalFileName;
+	
+	private String fileName;
+	private String contentType;
+	private long fileSize;
+	@Override
+	public int compareTo(MallDTO o) {
+	
+		return this.getMallName().compareTo(o.getMallName());
+	}
+	
+	
+	}
 
-}
+
