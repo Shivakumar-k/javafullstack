@@ -21,12 +21,15 @@ import com.xworkz.contact.service.ContactService;
 @Component
 @RequestMapping("/")
 public class ContactController {
-	@Autowired
-	private ContactService service;
+	
+	
 
 	public ContactController() {
 		System.out.println("running no arg const of ContactController");
 	}
+	
+	@Autowired
+	private ContactService service;
 
 	@PostMapping("/save")
 	public String onSave(Model model,ContactDTO dto, BindingResult bindingResult, MultipartFile file) throws IOException {
@@ -42,7 +45,7 @@ public class ContactController {
 			return "/Register.jsp";
 		} else {
 			
-			model.addAttribute("successmsg", "Data saved succesfully");
+			
 			System.out.println("File Name: "+ file.getName());
 			System.out.println("File Original Name: "+file.getOriginalFilename());
 			System.out.println("content Type  "+file.getContentType());
@@ -62,6 +65,7 @@ public class ContactController {
 			}
 			System.out.println("Data is valid: "+dto);
 			service.validateAndSave(dto);
+			model.addAttribute("successmsg", "Data saved succesfully");
 			
 			return "/Register.jsp";
 		}

@@ -5,29 +5,34 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
-import com.xworkz.contact.dto.ContactDTO;
+import com.xworkz.contact.entity.ContactEntity;
+@Component
 @Repository
-public class ContactRepoImpl implements ContactRepository{
+public class ContactRepoImpl implements ContactRepository {
 	
+	@Autowired
+	private EntityManagerFactory factoryBean;
+
 	public ContactRepoImpl() {
 		System.out.println("Running ContactRepoImpl no arg const..");
 	}
-	
-	
-	private EntityManagerFactory factory = Persistence.createEntityManagerFactory(null);
-	private EntityManager manager=factory.createEntityManager();
-	private EntityTransaction transaction = manager.getTransaction();
 
 	@Override
-	public boolean save(ContactDTO dto) {
+	public boolean save(ContactEntity entity) {
+		
+
+		EntityManager manager = factoryBean.createEntityManager();
+		EntityTransaction transaction = manager.getTransaction();
 		System.out.println("Running Save in repo");
 		transaction.begin();
-		manager.persist(dto);
+		manager.persist(entity);
 		transaction.commit();
 		manager.close();
-		return false;
+		return true;
 	}
 
 }

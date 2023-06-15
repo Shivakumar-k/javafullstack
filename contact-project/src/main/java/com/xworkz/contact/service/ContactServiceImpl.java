@@ -13,6 +13,10 @@ import com.xworkz.contact.repository.ContactRepository;
 public class ContactServiceImpl implements ContactService {
 	@Autowired
 	private ContactRepository repository;
+	
+	public ContactServiceImpl() {
+		System.out.println("no arg const of ContactServiceImpl");
+	}
 
 	@Override
 	public boolean validateAndSave(ContactDTO dto) {
@@ -20,6 +24,6 @@ public class ContactServiceImpl implements ContactService {
 		ContactEntity entity = new ContactEntity();
 		BeanUtils.copyProperties(dto, entity);
 		System.out.println(""+entity);
-		return true;
+		return this.repository.save(entity);
 	}
 }

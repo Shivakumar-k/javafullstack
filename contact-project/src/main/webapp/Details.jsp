@@ -7,7 +7,7 @@
 <title>View Details</title>
 </head>
 <body>
-<h1>details..</h1>
+
 
 
 </body>
