@@ -23,7 +23,7 @@
 <br>
 <a class="btn btn-primary" href="Details.jsp">View Details</a>
 <br>
-<a class="btn btn-primary" href="Download.jsp">Download</a>
+<a class="btn btn-primary" href="Search.jsp">Search</a>
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -5,19 +5,22 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.xworkz.contact.constant.ContactConstant;
+
 import com.xworkz.contact.dto.ContactDTO;
 import com.xworkz.contact.service.ContactService;
-
+@Controller
 @Component
 @RequestMapping("/")
 public class ContactController {
@@ -30,6 +33,15 @@ public class ContactController {
 	
 	@Autowired
 	private ContactService service;
+	
+	@GetMapping("/search")
+	public String onSearch(Model model, String name) {
+		System.out.println("running onSearch with param"+name);
+		List<ContactDTO> list= service.findByName(name);
+		model.addAttribute("list",list);
+		return "/Search.jsp";
+
+	}
 
 	@PostMapping("/save")
 	public String onSave(Model model,ContactDTO dto, BindingResult bindingResult, MultipartFile file) throws IOException {
@@ -52,8 +64,8 @@ public class ContactController {
 			System.out.println("file size: "+file.getSize());
 //	System.out.println(file.getBytes());
 			String dtoFileName =System.currentTimeMillis()+"_"+file.getOriginalFilename();
-			dto.setFileName(ContactConstant.FILE_NAME+dtoFileName);
-			dto.setOriginalFileName(dtoFileName);
+			dto.setFileName(dtoFileName);
+			dto.setOriginalFileName(file.getOriginalFilename());
 			dto.setContentType(file.getContentType());
 			dto.setFileSize(file.getSize());
 			File physicalFile = new File(dto.getFileName());
