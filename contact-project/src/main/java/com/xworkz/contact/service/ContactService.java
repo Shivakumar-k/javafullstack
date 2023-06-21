@@ -11,7 +11,7 @@ public interface ContactService {
 	
 	boolean validateAndSave(ContactDTO dto);
 	
-	default List<ContactDTO> findByName(String name){
+	 default List<ContactDTO> findByName(String name){
 		return Collections.emptyList();
 	}
 

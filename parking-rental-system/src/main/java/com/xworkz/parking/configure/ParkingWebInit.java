@@ -1,10 +1,9 @@
-package com.xworkz.newsLetter.configure;
-
+package com.xworkz.parking.configure;
 
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class NewsLetterWebInit extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class ParkingWebInit extends AbstractAnnotationConfigDispatcherServletInitializer  {
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
@@ -15,14 +14,13 @@ public class NewsLetterWebInit extends AbstractAnnotationConfigDispatcherServlet
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
 		System.out.println("Running getServletConfigClasses");
-		return new Class[] {NewsLetterConfigure.class};
+		return new Class[] {ParkingConfigure.class};
 	}
 
 	@Override
 	protected String[] getServletMappings() {
-		System.out.println("Running getServletMappings");
+		System.out.println("Running getServletMappings(");
 		return new String[] {"/"};
 	}
-	
 
 }

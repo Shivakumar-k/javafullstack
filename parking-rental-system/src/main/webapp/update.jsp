@@ -4,11 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>details</title>
+<title>Insert title here</title>
 </head>
 <body>
-<h1>${name}</h1>
-
+<h1>update page</h1>
 
 </body>
 </html>
