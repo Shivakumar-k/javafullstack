@@ -32,7 +32,7 @@ label {
 	margin-top: -8%;
 }
 </style>
-<body class="text-center">
+
 	<nav class="navbar bg-success">
 		<div class="container-fluid justify-content-start">
 			<a class="navbar-brand" href="#"> <img
@@ -50,7 +50,9 @@ label {
 		</div>
 	</nav>
 	</head>
+<body class="text-center">
 
+<h4>${error}</h4>
 <h3>Admin Sign in</h3>
 	<div id="form">
 		<form action="admin" method="get">

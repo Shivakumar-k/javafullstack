@@ -10,7 +10,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@NamedQuery(name="findByEmailAndPassword", query = "select info from ParkingEntity as info where info.email AND info.password like :nm AND p")
+@NamedQuery(name="findAll", query = "select info from ParkingEntity as info ")
 @Table(name="admin")
 public class ParkingEntity {
 	
@@ -19,9 +19,9 @@ public class ParkingEntity {
 	private int id;
 	@Column(name="name")
 	private String name;
-	@Column(name="email")
+	@Column(name="amail")
 	private String email;
-	@Column(name="password")
+	@Column(name="aPassword")
 	private String password;
 	@Column(name="loginTime")
 	private String loginTime;

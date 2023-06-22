@@ -23,11 +23,20 @@ public class ParkingController {
 	}
 	
 	@GetMapping("/admin")
-	public String onSearch(Model model, String name) {
-		System.out.println("running onSearch with param"+name);
-		List<ParkingDTO> list= service.findByEmailAndPassword(name, name);
-		model.addAttribute("list",list);
-		return "/update.jsp";
+	public String onSearch( ParkingDTO dto,Model model) { 
+		System.out.println("running onSearch");
+		
+//	Morning--	List<ParkingDTO> dtol = service.findAll();
+		
+		
+		boolean valid =service.validate(dto);
+		
+		if(valid) {
+			System.out.println("Valid credentials");
+			return "/update.jsp";
+		}				
+		model.addAttribute("error","Invalid Email and Password");
+		return "/Admin.jsp";
 
 	}
 	

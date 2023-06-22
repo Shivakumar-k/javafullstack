@@ -8,8 +8,11 @@ import com.xworkz.parking.dto.ParkingDTO;
 
 public interface ParkingService {
 	
-	default List<ParkingDTO> findByEmailAndPassword(String email,String password){
+	default List<ParkingDTO> findAll(){
 		return Collections.emptyList();
+	}
+	default public boolean validate(ParkingDTO dto) {
+		return false;
 	}
 
 

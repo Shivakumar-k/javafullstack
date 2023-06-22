@@ -7,7 +7,7 @@ import com.xworkz.parking.entity.ParkingEntity;
 
 public interface ParkingRepository {
 	
-	default List<ParkingEntity> findByEmailAndPsssword(String email,String password){
+	default List<ParkingEntity> findAll(){
 		return Collections.emptyList();
 	}
 	
