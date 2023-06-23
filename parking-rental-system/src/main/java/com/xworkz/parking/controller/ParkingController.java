@@ -11,37 +11,34 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.xworkz.parking.dto.ParkingDTO;
 import com.xworkz.parking.service.ParkingService;
+
 @Controller
 @Component
-@RequestMapping
+@RequestMapping("/")
 public class ParkingController {
 	@Autowired
 	private ParkingService service;
-	
+
 	public ParkingController() {
 		System.out.println("Running no-arg const.. of ParkingController");
 	}
-	
+
 	@GetMapping("/admin")
-	public String onSearch( ParkingDTO dto,Model model) { 
-		System.out.println("running onSearch");
-		
+	public String onSearch(ParkingDTO dto, Model model) {
+		System.err.println("running onSearch");
+
 //	Morning--	List<ParkingDTO> dtol = service.findAll();
-		
-		
-		boolean valid =service.validate(dto);
-		
-		if(valid) {
+
+		boolean valid = this.service.validate(dto);
+
+		if (valid) {
 			System.out.println("Valid credentials");
 			return "/update.jsp";
-		}				
-		model.addAttribute("error","Invalid Email and Password");
-		return "/Admin.jsp";
+		} else {
+			model.addAttribute("error", "Invalid Email and Password");
+			return "/Admin.jsp";
+		}
 
 	}
-	
-	
-	
-	
 
 }

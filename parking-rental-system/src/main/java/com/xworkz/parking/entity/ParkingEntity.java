@@ -8,29 +8,29 @@ import javax.persistence.Table;
 
 import lombok.Data;
 
-@Data
 @Entity
-@NamedQuery(name="findAll", query = "select info from ParkingEntity as info ")
-@Table(name="admin")
+@Data
+@NamedQuery(name = "findAll", query = "select info from ParkingEntity as info")
+@Table(name = "admin")
 public class ParkingEntity {
-	
+
 	@Id
-	@Column(name="id")
+	@Column(name = "id")
 	private int id;
-	@Column(name="name")
+	@Column(name = "name")
 	private String name;
-	@Column(name="amail")
+	@Column(name = "email")
 	private String email;
-	@Column(name="aPassword")
+	@Column(name = "password")
 	private String password;
-	@Column(name="loginTime")
+	@Column(name = "loginTime")
 	private String loginTime;
-	@Column(name="createdBy")
+	@Column(name = "createdBy")
 	private String createdBy;
-	@Column(name="UpdatedBy")
+	@Column(name = "UpdatedBy")
 	private String UpdatedBy;
-	@Column(name="createdDate")
+	@Column(name = "createdDate")
 	private String createdDate;
-	@Column(name="updatedDate")
+	@Column(name = "updatedDate")
 	private String updatedDate;
 }

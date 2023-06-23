@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,10 +20,10 @@ label {
 	margin: 4px;
 }
 
-#form {
+.form {
 	border-radius: 10px;
 	background: lightblue;
-	color: black;
+	color: rgb(155,50,80);
 	width: 300px;
 	padding: 20px;
 	left: 65%;
@@ -31,6 +32,11 @@ label {
 	position: absolute;
 	margin-top: -8%;
 }
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 </style>
 
 	<nav class="navbar bg-success">
@@ -38,7 +44,7 @@ label {
 			<a class="navbar-brand" href="#"> <img
 				src="https://pngimg.com/uploads/letter_p/letter_p_PNG77.png"
 				alt="Logo" width="36" height="30"
-				class="d-inline-block align-text-top"> Admin - Parking Rental
+				class="d-inline-block align-text-top" style="color:red"> Admin - Parking Rental
 				System
 			</a>
 			<button class="btn btn-sm btn-light me-2" type="button">
@@ -52,16 +58,16 @@ label {
 	</head>
 <body class="text-center">
 
-<h4>${error}</h4>
+<h4 style="color:red">${error}</h4>
 <h3>Admin Sign in</h3>
-	<div id="form">
+	<div class="form">
 		<form action="admin" method="get">
 			<div>
-				<label>Admin Mail:</label> <input type="email" name="amail">
+				<label>Admin Mail:</label> <input type="email" name="email">
 			</div>
 			<br>
 			<div>
-				<label>Password:</label><input type="password" name="aPassword">
+				<label>Password:</label><input type="password" name="password">
 			</div>
 			<br>
 			<div>
@@ -70,8 +76,20 @@ label {
 
 		</form>
 	</div>
-</body>
+<ul class="nav">
 
+<footer id="footer">
+
+  <div class="footer-content">
+    <!-- Add your footer content here -->
+    <p>&copy; 2023 Parking Rental. All rights reserved.</p>
+    <p>Contact: shivakumar.k.xworkz@gmail.com</p>
+  </div>
+  
+</footer>
+
+</ul>
+</body>
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </html>

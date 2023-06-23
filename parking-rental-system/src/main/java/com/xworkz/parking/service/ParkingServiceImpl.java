@@ -22,7 +22,7 @@ public class ParkingServiceImpl implements ParkingService {
 
 	@Override
 	public List<ParkingDTO> findAll() {
-		System.out.println("Running findByEmailAndPsssword in service ");
+		System.err.println("Running findByEmailAndPsssword in service ");
 		List<ParkingEntity> entities = this.repo.findAll();
 
 		List<ParkingDTO> dtos = entities.stream().map(ent -> {
@@ -34,19 +34,19 @@ public class ParkingServiceImpl implements ParkingService {
 
 		return dtos;
 	}
+
 	@Override
 	public boolean validate(ParkingDTO dto) {
 		System.out.println("Running Validate in service");
 		if (dto != null) {
-			System.out.println("dto is not null");
+			System.out.println("dto is not null" + dto);
 //			this.findAll();
-			List<ParkingEntity> list = repo.findAll();
+			List<ParkingEntity> list = this.repo.findAll();
 			for (ParkingEntity entity : list) {
 				if (entity.getEmail().equals(dto.getEmail()) && entity.getPassword().equals(dto.getPassword())) {
 					System.out.println("valid Email and password");
 					return true;
-				}else {}
-				System.out.println("Invalid Email and Password");
+				}
 			}
 		} else {
 			System.out.println("dto is null");

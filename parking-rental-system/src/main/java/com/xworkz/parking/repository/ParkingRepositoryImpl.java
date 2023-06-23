@@ -16,7 +16,6 @@ import com.xworkz.parking.entity.ParkingEntity;
 @Repository
 public class ParkingRepositoryImpl implements ParkingRepository {
 
-	private EntityManagerFactory factoryBean = Persistence.createEntityManagerFactory("com.xworkz");
 
 	public ParkingRepositoryImpl() {
 		System.out.println("No arg const of ParkingRepositoryImpl");
@@ -26,27 +25,25 @@ public class ParkingRepositoryImpl implements ParkingRepository {
 
 	public List<ParkingEntity> findAll() {
 		System.out.println("running findAll");
-
+		EntityManagerFactory factoryBean = Persistence.createEntityManagerFactory("com.xworkz");
 		EntityManager entityManager = factoryBean.createEntityManager();
 		try {
-			
 			Query query = entityManager.createNamedQuery("findAll");
 			System.out.println("Executing query");
-			List<ParkingEntity> list=query.getResultList();
-            System.out.println("LIst------------------------ "+list);
-			return list ;
+			List<ParkingEntity> list = query.getResultList();
+			System.out.println("LIst------------------------ " + list);
+			return list;
 		}
 //		List<ParkingEntity> list = query.getResultList();
 //		System.out.println("list "+list);
-		
+
 		catch (PersistenceException e) {
 			e.printStackTrace();
-		}
-		finally {
+		} finally {
 			entityManager.close();
 		}
 		return Collections.emptyList();
-		
+
 	}
 
 }
