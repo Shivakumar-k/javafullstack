@@ -23,7 +23,7 @@ label {
 .form {
 	border-radius: 10px;
 	background: lightblue;
-	color: rgb(155,50,80);
+	color: rgb(155, 50, 80);
 	width: 300px;
 	padding: 20px;
 	left: 65%;
@@ -32,34 +32,35 @@ label {
 	position: absolute;
 	margin-top: -8%;
 }
+
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 </style>
 
-	<nav class="navbar bg-success">
-		<div class="container-fluid justify-content-start">
-			<a class="navbar-brand" href="#"> <img
-				src="https://pngimg.com/uploads/letter_p/letter_p_PNG77.png"
-				alt="Logo" width="36" height="30"
-				class="d-inline-block align-text-top" style="color:red"> Admin - Parking Rental
-				System
-			</a>
-			<button class="btn btn-sm btn-light me-2" type="button">
-				<a href="Home.jsp">Home
-			</button>
-			<button class="btn btn-sm btn-light " type="button">
-				<a href="User.jsp">User</a>
-			</button>
-		</div>
-	</nav>
-	</head>
+<nav class="navbar bg-success">
+	<div class="container-fluid justify-content-start">
+		<a class="navbar-brand" href="#"> <img
+			src="https://pngimg.com/uploads/letter_p/letter_p_PNG77.png"
+			alt="Logo" width="36" height="30"
+			class="d-inline-block align-text-top" style="color: red"> Admin
+			- Parking Rental System
+		</a>
+		<button class="btn btn-sm btn-light me-2" type="button">
+			<a href="Home.jsp">Home 
+		</button>
+		<button class="btn btn-sm btn-light " type="button">
+			<a href="User.jsp">User</a>
+		</button>
+	</div>
+</nav>
+</head>
 <body class="text-center">
 
-<h4 style="color:red">${error}</h4>
-<h3>Admin Sign in</h3>
+	<h4 style="color: red">${error}</h4>
+	<h3>Admin Sign in</h3>
 	<div class="form">
 		<form action="admin" method="get">
 			<div>
@@ -76,19 +77,21 @@ footer {
 
 		</form>
 	</div>
-<ul class="nav">
+	<ul class="nav">
 
-<footer id="footer">
+		<footer id="footer">
+			<nav class="navbar bg-success">
+				<div class="container-fluid justify-content-start">
+					<div class="footer-content">
+						<!-- Add your footer content here -->
+						<p>&copy; 2023 Parking Rental. All rights reserved.</p>
+						<p>Contact: shivakumar.k.xworkz@gmail.com</p>
+					</div>
+				</div>
+			</nav>
+		</footer>
 
-  <div class="footer-content">
-    <!-- Add your footer content here -->
-    <p>&copy; 2023 Parking Rental. All rights reserved.</p>
-    <p>Contact: shivakumar.k.xworkz@gmail.com</p>
-  </div>
-  
-</footer>
-
-</ul>
+	</ul>
 </body>
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

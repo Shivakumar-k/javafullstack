@@ -31,7 +31,7 @@ public class ParkingRepositoryImpl implements ParkingRepository {
 			Query query = entityManager.createNamedQuery("findAll");
 			System.out.println("Executing query");
 			List<ParkingEntity> list = query.getResultList();
-			System.out.println("LIst------------------------ " + list);
+			System.out.println("List------------------------ " + list);
 			return list;
 		}
 //		List<ParkingEntity> list = query.getResultList();
