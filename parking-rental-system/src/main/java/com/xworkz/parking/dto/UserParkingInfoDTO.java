@@ -19,5 +19,7 @@ public class UserParkingInfoDTO {
 	private int price;
 
 	private int discount;
+	
+	private int total;
 
 }

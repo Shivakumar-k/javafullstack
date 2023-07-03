@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,19 +7,21 @@
 <title>User Page</title>
 </head>
 <body>
-<h1>User Page</h1>
+	<h1>User Page</h1>
+	<h1>${parkingInfoSuccess}</h1>
+	<h1>${error}</h1>
 
-<form action="user" method="post">
+	<form action="userSign" method="post">
 
-<div>
-<label>Name:</label><input type="text" name="name" >
-</div>
-<div>
-<label>Email:</label><input type="email" name="email" >
-</div>
-<div>
-<label>Mobile:</label><input type="text" name="mobile" >
-</div>
+		<div>
+			<label>Name:</label><input type="text" name="name">
+		</div>
+		<div>
+			<label>Email:</label><input type="email" name="email">
+		</div>
+		<div>
+			<label>Mobile:</label><input type="text" name="mobile">
+		</div>
 
 		<div>
 			<label>Location :</label> <input type="text" name="location">
@@ -30,7 +32,8 @@
 		</div>
 		<br>
 		<div>
-			<label>Vehicle Fuel Type :</label> <input type="text" name="vehicleFuelType">
+			<label>Vehicle Fuel Type :</label> <input type="text"
+				name="vehicleFuelType">
 		</div>
 		<br>
 		<div>
@@ -48,8 +51,14 @@
 		<div>
 			<label>discount :</label> <input type="number" name="discount">
 		</div>
+		<br>
+		<div>
+			<label>Total :</label> <input type="number" name="total">
+		</div>
 
-       <div><input type="submit" value="Save"></div>
+		<div>
+			<input type="submit" value="Save">
+		</div>
 
 
 	</form>
