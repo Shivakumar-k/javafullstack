@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import com.xworkz.parking.dto.UserInfoDTO;
 import com.xworkz.parking.dto.UserParkingInfoDTO;
 import com.xworkz.parking.service.UserInfoService;

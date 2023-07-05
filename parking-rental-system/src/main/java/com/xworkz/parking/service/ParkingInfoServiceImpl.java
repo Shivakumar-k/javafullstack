@@ -1,6 +1,9 @@
 package com.xworkz.parking.service;
 
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,6 +40,20 @@ public class ParkingInfoServiceImpl implements ParkingInfoService {
 		}
 		
 		return true;
+	}
+	
+	@Override
+	public List<ParkingInfoDTO> findByLocation(String location) {
+		System.out.println("Running findByLocation: "+location);
+		List<ParkingInfoEntity> entities=this.repo.findByLocation(location);
+		
+		List<ParkingInfoDTO> dtos = entities.stream().map(ent -> {
+			ParkingInfoDTO infoDTO = new ParkingInfoDTO();
+			BeanUtils.copyProperties(ent, infoDTO);
+			return infoDTO;
+		}).collect(Collectors.toList());
+		
+		return dtos;
 	}
 
 }

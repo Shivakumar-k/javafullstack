@@ -1,6 +1,6 @@
 package com.xworkz.parking.controller;
 
-
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -41,7 +41,16 @@ public class ParkingController {
 			return "/Admin.jsp";
 		}
 	}
-    @PostMapping("/info")
+
+	@GetMapping("/search")
+	public String onSearchLoc(Model model, String location) {
+		System.out.println("running onSearch with param" + location);
+		List<ParkingInfoDTO> list = infoService.findByLocation(location);
+		model.addAttribute("list", list);
+		return "/update.jsp";
+	}
+
+	@PostMapping("/info")
 	public String parkingInfo(ParkingInfoDTO infoDto, Model model) {
 		System.out.println("Running ParkingInfo " + getClass().getSimpleName());
 		boolean save = infoService.validateAndSave(infoDto);

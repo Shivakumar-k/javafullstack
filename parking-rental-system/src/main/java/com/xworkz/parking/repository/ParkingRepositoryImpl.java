@@ -13,16 +13,15 @@ import org.springframework.stereotype.Repository;
 
 import com.xworkz.parking.entity.ParkingEntity;
 
+
 @Repository
 public class ParkingRepositoryImpl implements ParkingRepository {
-
 
 	public ParkingRepositoryImpl() {
 		System.out.println("No arg const of ParkingRepositoryImpl");
 	}
 
 	@Override
-
 	public List<ParkingEntity> findAll() {
 		System.out.println("running findAll");
 		EntityManagerFactory factoryBean = Persistence.createEntityManagerFactory("com.xworkz");
@@ -45,5 +44,12 @@ public class ParkingRepositoryImpl implements ParkingRepository {
 		return Collections.emptyList();
 
 	}
+	
+		
+	
 
-}
+		
+
+	}
+
+

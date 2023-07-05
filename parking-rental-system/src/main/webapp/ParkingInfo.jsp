@@ -68,19 +68,44 @@ footer {
 		</div>
 		<br>
 		<div>
-			<label>Vehicle Type :</label> <input type="text" name="vehicleType">
+			<label>Vehicle Type</label> <select name="vehicleType">
+					<option value="">--select option--</option>
+					<option value="TWO WHEELER">TWO WHEELER</option>
+					<option value="FOUR WHEELER">fOUR WHEELER</option>
+					
+				</select>
 		</div>
 		<br>
 		<div>
-			<label>Vehicle Fuel Type :</label> <input type="text" name="vehicleFuelType">
+			<label>Vehicle Fuel Type </label> <select name="vehicleFuelType">
+					<option value="">--select option--</option>
+					<option value="Petrol">Petrol</option>
+					<option value="Diesel">Diesel </option>
+					<option value="ELECTRIC">ELECTRIC</option>
+				</select>
 		</div>
 		<br>
 		<div>
-			<label>Vehicle Brand :</label> <input type="text" name="vehicleBrand">
+			<label>Vehicle Brand</label> <select name="vehicleBrand">
+					<option value="">--select option--</option>
+					<option value="Tata">Tata</option>
+					<option value="Hyundai">Hyundai</option>
+					<option value="Wolkswagon">Wolkswagon</option>
+					<option value="MG Hector">MG Hector</option>
+					<option value="Merc">Merc</option>
+				</select>
 		</div>
 		<br>
 		<div>
-			<label>Rental Terms :</label> <input type="text" name="rentalTerms">
+			<label class="col-form-label">Rental Terms </label> <select name="rentalTerms">
+					<option value="">--select option--</option>
+					<option value="1 Day">1 Day</option>
+					<option value="15 Days">15 Days</option>
+					<option value="30 Days">30 Days</option>
+					<option value="90 Days">90 Days</option>
+					<option value="180 Days">180 Days</option>
+					<option value="360 Days">360 Days</option>
+				</select>
 		</div>
 		<br>
 		<div>
@@ -98,4 +123,6 @@ footer {
 
 
 </body>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </html>

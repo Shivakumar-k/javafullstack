@@ -40,7 +40,8 @@ public class ParkingServiceImpl implements ParkingService {
 		System.out.println("Running Validate in service");
 		if (dto != null) {
 			System.out.println("dto is not null" + dto);
-//			this.findAll();
+            System.out.println(dto.getEmail());
+//            ParkingEntity parkingEntity =  
 			List<ParkingEntity> list = this.repo.findAll();
 			for (ParkingEntity entity : list) {
 				if (entity.getEmail().equals(dto.getEmail()) && entity.getPassword().equals(dto.getPassword())) {

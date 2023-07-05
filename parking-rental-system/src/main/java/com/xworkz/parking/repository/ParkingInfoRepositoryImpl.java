@@ -1,10 +1,12 @@
 package com.xworkz.parking.repository;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-
+import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
@@ -28,6 +30,19 @@ public class ParkingInfoRepositoryImpl implements ParkingInfoRepository {
 		manager.close();
 		
 		return true;
+	}
+	@Override
+	public List<ParkingInfoEntity> findByLocation(String location){
+		System.out.println("Running findByLocation: "+location);
+		EntityManagerFactory factory= Persistence.createEntityManagerFactory("com.xworkz");
+		EntityManager manager = factory.createEntityManager();
+		Query query=manager.createNamedQuery("findByLocation");
+		query.setParameter("byLocation","%"+location+"%");
+		List<ParkingInfoEntity> result=query.getResultList();
+		System.out.println("result from repo" + result);
+		manager.close();
+		
+		return result;
 	}
 
 }

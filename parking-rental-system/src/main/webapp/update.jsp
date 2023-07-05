@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,6 +23,7 @@ footer {
       <img src="https://pngimg.com/uploads/letter_p/letter_p_PNG77.png" alt="Logo" width="36" height="30" class="d-inline-block align-text-top">
       Update -Parking Rental System
     </a>
+    <br>
     <button class="btn btn-sm btn-light " type="button">
 				<a href="User.jsp">User</a>
 			</button>
@@ -31,6 +33,38 @@ footer {
 <body class="text-center">
 <h1>Update Parking Info</h1>
 <a class="btn btn-primary" href="ParkingInfo.jsp">Update Parking Info</a>
+
+<br>
+<form action="search" method="get">
+Search Here: <input type="text" name="location" placeholder="Enter Location" >
+
+<input type="submit" value="Search" class="btn-warning"  >
+</form>
+
+<table class="table">
+		<tr>
+			<th>Location</th>
+			<th>Vehicle Type</th>
+			<th>Vehicle Fuel Type</th>
+			<th>Vehicle Brand</th>
+			<th>Rental Terms</th>
+			<th>Price</th>
+			<th>Discount</th>
+		</tr>
+		<c:forEach items="${list}" var="dto">
+			<tr>
+				<td>${dto.location}</td>
+				<td>${dto.vehicleType}</td>
+				<td>${dto.vehicleFuelType}</td>
+				<td>${dto.vehicleBrand}</td>
+				<td>${dto.rentalTerms}</td>
+				<td>${dto.price}</td>
+				<td>${dto.discount}</td>
+			</tr>
+		</c:forEach>
+
+
+	</table>
 
 <ul class="nav">
 
@@ -48,6 +82,6 @@ footer {
 		</footer>
 
 	</ul>
-	
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>	
 </body>
 </html>

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import com.xworkz.parking.entity.UserInfoEntity;
 import com.xworkz.parking.entity.UserParkingInfoEntity;
+
 @Repository
 public class UserInfoRepositoryImpl implements UserInfoRepository {
 	public UserInfoRepositoryImpl() {
@@ -20,7 +21,7 @@ public class UserInfoRepositoryImpl implements UserInfoRepository {
 	public boolean save(UserInfoEntity entity1) {
 		System.out.println("Running save method in UserInfoRepositoryImpl");
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("com.xworkz");
-		EntityManager manager=factory.createEntityManager();
+		EntityManager manager = factory.createEntityManager();
 		EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
 		manager.persist(entity1);
@@ -32,9 +33,9 @@ public class UserInfoRepositoryImpl implements UserInfoRepository {
 	@Override
 	public boolean save(UserParkingInfoEntity entity2) {
 		System.out.println("Runnning save method");
-		EntityManagerFactory factory=Persistence.createEntityManagerFactory("com.xworkz");
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("com.xworkz");
 		EntityManager manager = factory.createEntityManager();
-		EntityTransaction transaction=manager.getTransaction();
+		EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
 		manager.persist(entity2);
 		transaction.commit();
@@ -50,9 +51,9 @@ public class UserInfoRepositoryImpl implements UserInfoRepository {
 		query.setParameter("mail", email);
 		try {
 			Object obj = query.getSingleResult();
-			return (UserInfoEntity)obj;
-			}catch (Exception e) {
-		return null;
-			}
+			return (UserInfoEntity) obj;
+		} catch (Exception e) {
+			return null;
+		}
 	}
 }
