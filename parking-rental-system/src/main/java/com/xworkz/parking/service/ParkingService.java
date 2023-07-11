@@ -11,8 +11,8 @@ public interface ParkingService {
 	default List<ParkingDTO> findAll(){
 		return Collections.emptyList();
 	}
-	default public boolean validate(ParkingDTO dto) {
-		return false;
+	default public ParkingDTO validate(ParkingDTO dto) {
+		return null;
 	}
 
 

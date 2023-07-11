@@ -31,10 +31,11 @@ public class ParkingController {
 	@GetMapping("/admin")
 	public String onSearch(ParkingDTO dto, Model model) {
 		System.err.println("running onSearch");
-		boolean valid = this.service.validate(dto);
+		ParkingDTO validDTO = this.service.validate(dto);
 
-		if (valid) {
+		if (validDTO!=null) {
 			System.out.println("Valid credentials");
+			model.addAttribute("dto",validDTO);
 			return "/update.jsp";
 		} else {
 			model.addAttribute("error", "Invalid Email and Password");

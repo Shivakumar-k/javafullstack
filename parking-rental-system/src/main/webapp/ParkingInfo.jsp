@@ -3,13 +3,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
 	rel="stylesheet">
+
 <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
-	rel="stylesheet">
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
 <style type="text/css">
 label {
 	width: 100px;
@@ -55,68 +59,76 @@ footer {
 </head>
 <body class="text-center">
 
-<h1>Enter below details</h1>
+	<h1>Enter below details</h1>
 
-<br>
+	<br>
 
 	<h4 style="color: red">${error}</h4>
 
 	<form action="info" method="post">
 
 		<div>
-			<label>Location :</label> <input type="text" name="location">
+			<label>Location :</label> <input type="text" id="location"
+				name="location">
 		</div>
 		<br>
 		<div>
-			<label>Vehicle Type</label> <select name="vehicleType">
-					<option value="">--select option--</option>
-					<option value="TWO WHEELER">TWO WHEELER</option>
-					<option value="FOUR WHEELER">fOUR WHEELER</option>
-					
-				</select>
+			<label>Vehicle Type</label> <select name="vehicleType"
+				id="vehicleType">
+				<option value="">--select option--</option>
+				<option value="TWO WHEELER">TWO WHEELER</option>
+				<option value="FOUR WHEELER">fOUR WHEELER</option>
+
+			</select>
 		</div>
 		<br>
 		<div>
-			<label>Vehicle Fuel Type </label> <select name="vehicleFuelType">
-					<option value="">--select option--</option>
-					<option value="Petrol">Petrol</option>
-					<option value="Diesel">Diesel </option>
-					<option value="ELECTRIC">ELECTRIC</option>
-				</select>
+			<label>Vehicle Fuel Type </label> <select name="vehicleFuelType"
+				id="vehicleFuelType">
+				<option value="">--select option--</option>
+				<option value="Petrol">Petrol</option>
+				<option value="Diesel">Diesel</option>
+				<option value="ELECTRIC">ELECTRIC</option>
+			</select>
 		</div>
 		<br>
 		<div>
-			<label>Vehicle Brand</label> <select name="vehicleBrand">
-					<option value="">--select option--</option>
-					<option value="Tata">Tata</option>
-					<option value="Hyundai">Hyundai</option>
-					<option value="Wolkswagon">Wolkswagon</option>
-					<option value="MG Hector">MG Hector</option>
-					<option value="Merc">Merc</option>
-				</select>
+			<label>Vehicle Brand</label> <select name="vehicleBrand"
+				id="vehicleBrand">
+				<option value="">--select option--</option>
+				<option value="Tata">Tata</option>
+				<option value="Hyundai">Hyundai</option>
+				<option value="Wolkswagon">Wolkswagon</option>
+				<option value="MG Hector">MG Hector</option>
+				<option value="Merc">Merc</option>
+			</select>
 		</div>
 		<br>
 		<div>
-			<label class="col-form-label">Rental Terms </label> <select name="rentalTerms">
-					<option value="">--select option--</option>
-					<option value="1 Day">1 Day</option>
-					<option value="15 Days">15 Days</option>
-					<option value="30 Days">30 Days</option>
-					<option value="90 Days">90 Days</option>
-					<option value="180 Days">180 Days</option>
-					<option value="360 Days">360 Days</option>
-				</select>
+			<label class="col-form-label">Rental Terms </label> <select
+				name="rentalTerms" id="rentalTerms">
+				<option value="">--select option--</option>
+				<option value="1 Day">1 Day</option>
+				<option value="15 Days">15 Days</option>
+				<option value="30 Days">30 Days</option>
+				<option value="90 Days">90 Days</option>
+				<option value="180 Days">180 Days</option>
+				<option value="360 Days">360 Days</option>
+			</select>
 		</div>
 		<br>
 		<div>
-			<label>Price :</label> <input type="number" name="price">
+			<label>Price :</label> <input type="number" name="price" id="price">
 		</div>
 		<br>
 		<div>
-			<label>discount :</label> <input type="number" name="discount">
+			<label>discount :</label> <input type="number" name="discount"
+				id="discount">
 		</div>
 
-       <div><input type="submit" value="Save"></div>
+		<div>
+			<input type="submit" value="Save">
+		</div>
 
 
 	</form>

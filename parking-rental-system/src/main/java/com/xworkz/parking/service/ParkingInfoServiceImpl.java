@@ -55,5 +55,19 @@ public class ParkingInfoServiceImpl implements ParkingInfoService {
 		
 		return dtos;
 	}
+	
+	@Override
+	public ParkingInfoDTO isExist(String location, String vehicleType, String vehicleBrand, String vehicleFuelType,
+			String rentalTerms) {
+		System.out.println("running isExist method in service");
+		ParkingInfoEntity entity = this.repo.findByVariables(location, vehicleType, vehicleBrand, vehicleFuelType, rentalTerms);
+		if(entity!= null) {
+			ParkingInfoDTO dto = new ParkingInfoDTO();
+			BeanUtils.copyProperties(entity, dto);
+			return dto;
+		}else {
+			return null;
+		}
+	}
 
 }

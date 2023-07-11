@@ -1,5 +1,6 @@
 package com.xworkz.parking.service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -36,23 +37,27 @@ public class ParkingServiceImpl implements ParkingService {
 	}
 
 	@Override
-	public boolean validate(ParkingDTO dto) {
+	public ParkingDTO validate(ParkingDTO dto) {
 		System.out.println("Running Validate in service");
 		if (dto != null) {
 			System.out.println("dto is not null" + dto);
-            System.out.println(dto.getEmail());
+			System.out.println(dto.getEmail());
 //            ParkingEntity parkingEntity =  
-			List<ParkingEntity> list = this.repo.findAll();
+			List<ParkingEntity> list = this.repo.findByEmail(dto.getEmail());
 			for (ParkingEntity entity : list) {
 				if (entity.getEmail().equals(dto.getEmail()) && entity.getPassword().equals(dto.getPassword())) {
 					System.out.println("valid Email and password");
-					return true;
+					entity.setLoginTime(LocalDateTime.now());
+					this.repo.updateLoginTime(entity.getEmail(), entity.getLoginTime());
+					ParkingDTO parkingDTO=new ParkingDTO();
+					BeanUtils.copyProperties(entity, parkingDTO);
+					return parkingDTO;
 				}
 			}
 		} else {
 			System.out.println("dto is null");
 		}
-		return false;
+		return null;
 	}
 
 }

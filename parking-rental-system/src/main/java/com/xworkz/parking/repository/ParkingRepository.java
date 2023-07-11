@@ -1,5 +1,6 @@
 package com.xworkz.parking.repository;
 
+import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.List;
 
@@ -15,5 +16,9 @@ public interface ParkingRepository {
 	default List<ParkingInfoEntity> findByLocation(String location) {
 		return Collections.emptyList();
 	}
+	
+	List<ParkingEntity> findByEmail(String email);
+	
+	 boolean updateLoginTime(String email,LocalDateTime dateTime); 
 
 }

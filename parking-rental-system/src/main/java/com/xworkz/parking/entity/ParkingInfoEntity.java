@@ -11,6 +11,7 @@ import lombok.Data;
 @Entity
 @Data
 @Table(name = "parking_info")
+@NamedQuery(name = "findByAll", query = "select aa from ParkingInfoEntity aa where aa.location=:lc and aa.vehicleType=:type and aa.vehicleFuelType=:fuel and aa.vehicleBrand=:brand and aa.rentalTerms=:days")
 @NamedQuery(name = "findByLocation", query = "select info from ParkingInfoEntity as info where info.location like :byLocation")
 public class ParkingInfoEntity {
 	@Id

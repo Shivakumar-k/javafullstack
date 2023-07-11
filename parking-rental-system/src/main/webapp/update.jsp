@@ -1,47 +1,54 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.
-    com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="https://getbootstrap.
+    com/docs/5.3/assets/css/docs.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
 <meta charset="ISO-8859-1">
 <title>Update</title>
 <style type="text/css">
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
-
 </style>
 <nav class="navbar bg-success">
-  <div class="container-fluid justify-content-start">
-    <a class="navbar-brand" href="#">
-      <img src="https://pngimg.com/uploads/letter_p/letter_p_PNG77.png" alt="Logo" width="36" height="30" class="d-inline-block align-text-top">
-      Update -Parking Rental System
-    </a>
-    <br>
-    <button class="btn btn-sm btn-light " type="button">
-				<a href="User.jsp">User</a>
-			</button>
-  </div>
+	<div class="container-fluid justify-content-start">
+		<a class="navbar-brand" href="#"> <img
+			src="https://pngimg.com/uploads/letter_p/letter_p_PNG77.png"
+			alt="Logo" width="36" height="30"
+			class="d-inline-block align-text-top"> Update -Parking Rental
+			System
+		</a> <br> <a href="User.jsp">
+			<button class="btn btn-sm btn-light " type="button">User</button>
+		</a>
+
+		<h5>Name : ${dto.name }</h5>
+	</div>
 </nav>
 </head>
 <body class="text-center">
-<h1>Update Parking Info</h1>
-<a class="btn btn-primary" href="ParkingInfo.jsp">Update Parking Info</a>
+	<h1>Update Parking Info</h1>
+	<a class="btn btn-primary" href="ParkingInfo.jsp">Update Parking
+		Info</a>
 
-<br>
-<form action="search" method="get">
-Search Here: <input type="text" name="location" placeholder="Enter Location" >
+	<br>
+	<form action="search" method="get">
+		Search Here: <input type="text" name="location" id="location"
+			placeholder="Enter Location"> <input type="submit"
+			value="Search" class="btn-warning">
+	</form>
 
-<input type="submit" value="Search" class="btn-warning"  >
-</form>
-
-<table class="table">
+	<table class="table">
 		<tr>
 			<th>Location</th>
 			<th>Vehicle Type</th>
@@ -62,26 +69,26 @@ Search Here: <input type="text" name="location" placeholder="Enter Location" >
 				<td>${dto.discount}</td>
 			</tr>
 		</c:forEach>
-
-
 	</table>
 
-<ul class="nav">
+	<ul class="nav">
 
 		<footer id="footer">
-		
+			s
 			<nav class="navbar bg-success">
 				<div class="container-fluid justify-content-start">
 					<div class="footer-content">
 						<!-- Add your footer content here -->
 						<p>&copy; 2023 Parking Rental. All rights reserved.</p>
 						<p>Contact: shivakumar.k.xworkz@gmail.com</p>
+						<h5>Login Time:${dto.loginTime}</h5>
 					</div>
 				</div>
 			</nav>
 		</footer>
 
 	</ul>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>	
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

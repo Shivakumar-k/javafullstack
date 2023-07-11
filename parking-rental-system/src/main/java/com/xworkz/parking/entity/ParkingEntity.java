@@ -1,5 +1,7 @@
 package com.xworkz.parking.entity;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -11,6 +13,8 @@ import lombok.Data;
 @Entity
 @Data
 @NamedQuery(name = "findAll", query = "select info from ParkingEntity as info")
+@NamedQuery(name="findByEmail", query = "select info from ParkingEntity as info where info.email=:byEmail")
+@NamedQuery(name="updateLogingTime", query = "update ParkingEntity info set info.loginTime=:updatedTime where info.email=:byEmail")
 @Table(name = "admin")
 public class ParkingEntity {
 
@@ -24,7 +28,7 @@ public class ParkingEntity {
 	@Column(name = "password")
 	private String password;
 	@Column(name = "loginTime")
-	private String loginTime;
+	private LocalDateTime loginTime;
 	@Column(name = "createdBy")
 	private String createdBy;
 	@Column(name = "UpdatedBy")

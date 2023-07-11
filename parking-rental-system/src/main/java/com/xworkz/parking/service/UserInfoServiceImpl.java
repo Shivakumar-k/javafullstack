@@ -18,7 +18,6 @@ public class UserInfoServiceImpl implements UserInfoService {
 		System.out.println("No-args UserInfoServiceImpl");
 	}
 	
-	
 
 	@Override
 	public boolean validateAndSave(UserInfoDTO dto1, UserParkingInfoDTO dto2) {
@@ -36,5 +35,17 @@ public class UserInfoServiceImpl implements UserInfoService {
 		
 		return this.repo.save(parkingInfoEntity);
 	}
+	 
+	@Override
+	public boolean isUserExist(String email) {
+		System.out.println("Running isUserExist: "+email);
+		UserInfoEntity userInfoEntity = this.repo.findByEmail(email);
+		
+		if (userInfoEntity != null) {
+			return true;
+		}
+		return false;
+	}
+	
 
 }
