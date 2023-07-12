@@ -13,6 +13,8 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import com.xworkz.parking.entity.UserSignUpEntity;
+
 public class SendMail {
 	public static String otp = new DecimalFormat("0000").format(new Random().nextInt(9999));
 

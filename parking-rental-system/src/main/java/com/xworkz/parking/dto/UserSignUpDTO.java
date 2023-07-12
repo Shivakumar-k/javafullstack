@@ -13,6 +13,6 @@ public class UserSignUpDTO {
 	private long mobile;
 	private String address;
 
-	private int otp;
+	private String otp;
 
 }

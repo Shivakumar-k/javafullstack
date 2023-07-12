@@ -9,6 +9,11 @@
 <h4>
 		<a href="UserSignUp.jsp">SignUp</a>
 	</h4>
+	
+	<h4 style="color: green">${success}</h4>
+	<h4> ${failure }</h4>
+	<h4 style="color: green">${verifiedSuccessfully}</h4>
+	<h4 style="color: red">${verificationFailure}</h4>
 <body>
 	<form action="SignIn" method="post">
 		<div>

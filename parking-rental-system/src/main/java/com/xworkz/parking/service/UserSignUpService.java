@@ -6,4 +6,6 @@ public interface UserSignUpService {
 	
 	boolean save(UserSignUpDTO dto);
 	
+	boolean verifyOtp(UserSignUpDTO dto);
+	
 }
