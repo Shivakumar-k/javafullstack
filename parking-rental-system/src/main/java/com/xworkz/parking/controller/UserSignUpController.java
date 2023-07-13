@@ -1,5 +1,6 @@
 package com.xworkz.parking.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,7 +11,7 @@ import com.xworkz.parking.service.UserSignUpService;
 @Controller
 @RequestMapping("/")
 public class UserSignUpController {
-	
+	@Autowired
 	private UserSignUpService service;
 	
 	public UserSignUpController() {
@@ -23,7 +24,7 @@ public class UserSignUpController {
 		boolean save = this.service.save(dto);
 		if (save) {
 			model.addAttribute("success", "SignUp Successfully,Please Enter Otp");
-			return "otp.jsp";
+			return "/UserSignIn.jsp";
 		} else {
 			model.addAttribute("failure", "SignUp Failed");
 			return "/UserSignUp.jsp";
@@ -43,6 +44,15 @@ public class UserSignUpController {
 			return "/UserSignUp.jsp";
 		}
 
+	}
+	@PostMapping("/SignIn")
+	private String signIn(String email) {
+		System.out.println("Running signIn method");
+	boolean save	=this.service.sendOtp(email);
+	if(save) {
+		return "/Otp.jsp";
+	}
+		return "/UserSignIn.jsp";	
 	}
 
 }

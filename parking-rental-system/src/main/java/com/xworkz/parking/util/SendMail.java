@@ -55,8 +55,8 @@ public class SendMail {
 
 			message.setFrom(new InternetAddress(fromEmail));
 
-			message.setSubject("OTP");
-			message.setText("OTP id " + entity.getOtp());
+			message.setSubject("Shiva sent a OTP");
+			message.setText("OTP is " + entity.getOtp());
 
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(toEmail));
 

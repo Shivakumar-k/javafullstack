@@ -8,4 +8,6 @@ public interface UserSignUpService {
 	
 	boolean verifyOtp(UserSignUpDTO dto);
 	
+	boolean sendOtp(String email);
+	
 }

@@ -20,9 +20,9 @@
 			<label>Email:</label> <input type="email" name="email">
 		</div>
 
-		<div>
-			<label>Password:</label><input type="password" name="password">
-		</div>
+		<!-- <div>
+			<label>OTP:</label><input type="text" name="otp">
+		</div> -->
 		<div>
 			<input type="submit" value="SignIn">
 		</div>
