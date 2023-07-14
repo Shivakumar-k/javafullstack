@@ -12,5 +12,8 @@ public class ContactDTO implements Serializable {
 	private String mobile;
 	private String type;
 	private String description;
+	
+	
+	
 
 }
