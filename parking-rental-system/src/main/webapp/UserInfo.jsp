@@ -9,7 +9,7 @@
 <body>
 
 <form action="userInfo" method="get">
-Name:<input type="text" name="name">
+Name: <input type="text" name="name">
 
 
 </form>

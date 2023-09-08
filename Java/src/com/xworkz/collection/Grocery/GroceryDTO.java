@@ -77,6 +77,12 @@ public class GroceryDTO implements Serializable,Comparable<GroceryDTO> {
 		return "GroceryDTO [id=" + id + ", name=" + name + ", price=" + price + ", quantity=" + quantity + "]";
 	}
 
+	@Override
+	public int compareTo(GroceryDTO o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 //	@Override
 //	public int compareTo(GroceryDTO o) {
 //		
