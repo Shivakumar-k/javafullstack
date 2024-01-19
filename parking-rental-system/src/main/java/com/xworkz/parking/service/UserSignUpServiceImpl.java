@@ -25,8 +25,7 @@ public class UserSignUpServiceImpl implements UserSignUpService {
 
 		// this.repo.updateOtpByEmail(entity2.getEmail(), SendMail.otp);
 		return save;
-	}
-
+	} 
 	@Override
 	public boolean verifyOtp(UserSignUpDTO dto) {
 		System.out.println("Running verifyOtp method in UserSignUpServiceImpl");
@@ -38,7 +37,6 @@ public class UserSignUpServiceImpl implements UserSignUpService {
 			return false;
 		}
 	}
-
 	@Override
 	public boolean sendOtp(String email) {
 		System.out.println("Running sendOtp method in service");

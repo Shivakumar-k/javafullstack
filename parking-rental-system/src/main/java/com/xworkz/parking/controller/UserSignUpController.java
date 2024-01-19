@@ -8,16 +8,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.xworkz.parking.dto.UserSignUpDTO;
 import com.xworkz.parking.service.UserSignUpService;
+
 @Controller
 @RequestMapping("/")
 public class UserSignUpController {
 	@Autowired
 	private UserSignUpService service;
-	
+
 	public UserSignUpController() {
 		System.out.println("No-arg const....");
 	}
-	
+
 	@PostMapping("/SignUp")
 	private String userSignUp(UserSignUpDTO dto, Model model) {
 		System.out.println("Running userSignUp method in UserSignUpController");
@@ -30,7 +31,7 @@ public class UserSignUpController {
 			return "/UserSignUp.jsp";
 		}
 	}
-	
+
 	@PostMapping("/verifyOtp")
 	private String verifyOTP(String otp, UserSignUpDTO dto, Model model) {
 		System.out.println("Running userSignUp method in UserSignUpController");
@@ -45,14 +46,15 @@ public class UserSignUpController {
 		}
 
 	}
+
 	@PostMapping("/SignIn")
 	private String signIn(String email) {
 		System.out.println("Running signIn method");
-	boolean save	=this.service.sendOtp(email);
-	if(save) {
-		return "/Otp.jsp";
-	}
-		return "/UserSignIn.jsp";	
+		boolean save = this.service.sendOtp(email);
+		if (save) {
+			return "/Otp.jsp";
+		}
+		return "/UserSignIn.jsp";
 	}
 
 }
