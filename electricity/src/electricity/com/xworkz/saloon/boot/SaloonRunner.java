@@ -17,7 +17,7 @@ public class SaloonRunner {
 		ApplicationContext spring = new AnnotationConfigApplicationContext(SpringConfigure.class);
 
 		int beanDefinitionCount = spring.getBeanDefinitionCount();
-		System.out.println(beanDefinitionCount);
+		System.out.println("c "+beanDefinitionCount);
 
 		Stream.of(spring.getBeanDefinitionNames()).forEach(System.out::println);
 		

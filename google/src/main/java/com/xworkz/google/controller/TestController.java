@@ -13,7 +13,7 @@ public class TestController {
 	
 	@RequestMapping("/click")
 	public String onClick() {
-		System.out.println("Runnin on click");
+		System.out.println("Running on click");
 		return "/google.jsp";
 		
 

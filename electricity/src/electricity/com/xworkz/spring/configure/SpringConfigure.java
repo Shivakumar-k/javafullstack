@@ -4,7 +4,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("electricity.com.xworkz.saloon.thing")
+@ComponentScan("electricity.com.xworkz.spring.thing")
 
 public class SpringConfigure {
 	

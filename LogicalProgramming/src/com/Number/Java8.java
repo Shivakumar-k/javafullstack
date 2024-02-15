@@ -19,7 +19,7 @@ public class Java8 {
 		System.out.println(n);
 
 		int[] arr1 = { 1, 2, 3, 4, 5, 5 };
-		int[] arr2 = { 4, 5, 5, 6, 7, 5 };
+		int[] arr2 = { 4, 5, 5, 6, 7,  };
 
 		List<Integer> l = Arrays.stream(arr1).filter(x -> Arrays.stream(arr2).anyMatch(y -> x == y)).boxed().distinct()
 				.collect(Collectors.toList());
@@ -47,6 +47,7 @@ public class Java8 {
 				.collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()));
 
 		System.out.println(wordCount);
+		
 
 		Arrays.stream(arr1).filter(x -> Arrays.stream(arr2).anyMatch(y -> x == y));
 

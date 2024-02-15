@@ -2,6 +2,19 @@ package com.string;
 
 import java.util.*;
 
+class Animal{
+	public Animal() {
+		System.out.println("Animal created");
+	}
+}
+
+class Dog extends Animal{
+	public Dog() {
+		System.out.println("Dog created");
+		// TODO Auto-generated constructor stub
+	}
+}
+
 public class Demo {
 
 	public static void main(String[] args) {
@@ -16,6 +29,8 @@ public class Demo {
 
 			System.out.println(num + " ");
 		}
+		
+		Dog d = new Dog();
 
 	}
 

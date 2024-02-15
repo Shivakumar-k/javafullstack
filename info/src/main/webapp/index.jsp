@@ -19,13 +19,13 @@
   <form action="click" method="post">
 
 Name: <input type="text" name="name">
-
+<br>
 Email: <input type="email" name="email">
-
+<br>
 Mobile No: <input type="text" name="mobile">
-
+<br>
 City: <input type="text" name="city">
-
+<br>
 <input type="submit" value="click">
 
 </form>
