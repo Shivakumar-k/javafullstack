@@ -1,48 +1,44 @@
 package com.Number;
 
-
 /*
-Given a string, compute recursively the number of times lowercase "hi" appears in the string, however do not count "hi" that have an 'x' immedately before them.
-
-
-countHi2("ahixhi") → 1
-countHi2("ahibhi") → 2
-countHi2("xhixhi") → 0
+Printing all the palindromes in a substring
 
 */
 public class Demo {
 	public static void main(String[] args) {
-		 countYZ("hiy hiz");
+	System.out.println(compression("aaabbccc")); 
 
-		countYZ("ahiy xhiz");
-//		countYZ("ahibhi");
-//		countYZ("xhixhi");
 	}
 
-	private static void countYZ(String str) {
-		int count = 0;
-		int count1 = 0;
-		for (int i = 0; i < str.length(); i++) {
-			char ch = str.charAt(i);
-			boolean check = Character.isLetter(ch);
-			// System.out.println(ch+" "+check);
-
-			if (!check) {
-				if ((str.charAt(i - 1) == 'y') || (str.charAt(i - 1) == 'z')) {
-					count++;
-				}
-			} else {
-				continue;
+	public static String compression(String str) {
+		String s =str.substring(0, 1);
+		for (int i = 1; i < str.length(); i++) {
+			char curr = str.charAt(i);
+			char prev = str.charAt(i-1);
+			
+			if(curr!=prev) {
+				s+=curr;
 			}
-			if (str.substring(str.length() - 1).equals("y") || str.substring(str.length() - 1).equals("z")) {
-				count1++;
-			}
-//			if((str.charAt(str.length()-1)=='y')||(str.charAt(str.length()-1)=='z')) {
-//				count1++;
-//			}
-
+			
 		}
-		System.out.println(count + count1);
-
+		return s;
 	}
+
+	private static boolean isPlaindrome(String str) {
+		int i = 0;
+		int j = str.length() - 1;
+
+		while (i < j) {
+			if (str.charAt(i) != str.charAt(j)) {
+
+				return false;
+
+			}
+			i++;
+			j--;
+		}
+		return true;
+	}
+
+
 }
